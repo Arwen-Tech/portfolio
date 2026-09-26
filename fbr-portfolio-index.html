@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FBR AI-powered cotton bale detection and tracking project portfolio.">
+  <title>FBR Bale Detection | Maria Naseem</title>
+  <style>
+    :root{--bg:#07111f;--card:#101d2e;--text:#eef6ff;--muted:#9bb0c8;--cyan:#42d9c8;--blue:#4f8cff;--line:#21344a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{color:inherit;text-decoration:none}
+    .wrap{width:min(1100px,90%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.logo{font-weight:800;letter-spacing:.08em}.logo span,.accent{color:var(--cyan)}
+    .nav a.btn,.btn{display:inline-block;padding:11px 18px;border:1px solid var(--cyan);border-radius:10px;color:var(--cyan);font-weight:700}.hero{min-height:72vh;display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center;padding:70px 0}
+    .tag{display:inline-block;color:var(--cyan);background:#42d9c814;border:1px solid #42d9c840;padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:700}.hero h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.05;margin:20px 0}.hero p{font-size:1.08rem;color:var(--muted);max-width:700px}.actions{display:flex;gap:12px;margin-top:28px}.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#04111d;border:0}.panel{padding:26px;background:linear-gradient(145deg,#13243a,#0c1726);border:1px solid var(--line);border-radius:22px;box-shadow:0 22px 70px #0007}.metric{padding:18px 0;border-bottom:1px solid var(--line)}.metric:last-child{border:0}.metric strong{display:block;font-size:1.7rem;color:var(--cyan)}
+    section{padding:75px 0}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:.15em;font-size:.78rem;font-weight:800}h2{font-size:clamp(2rem,4vw,3rem);margin:8px 0 28px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}.card .icon{font-size:1.55rem}.card h3{margin:14px 0 7px}.card p,.about p{margin:0;color:var(--muted)}
+    .flow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.step{flex:1;min-width:150px;text-align:center;padding:20px 12px;border-radius:14px;background:var(--card);border:1px solid var(--line)}.arrow{color:var(--cyan);font-size:1.3rem}.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.stack{display:flex;flex-wrap:wrap;gap:10px}.pill{padding:8px 12px;background:#4f8cff15;border:1px solid #4f8cff55;color:#bcd2ff;border-radius:8px;font-size:.9rem}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);text-align:center}@media(max-width:760px){.hero,.about{grid-template-columns:1fr}.hero{padding:40px 0}.grid{grid-template-columns:1fr}.arrow{display:none}.flow{display:grid;grid-template-columns:1fr 1fr}.nav .btn{display:none}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav"><a class="logo" href="#">MARIA<span>.AI</span></a><a class="btn" href="#contact">Contact Me</a></header>
+  <main>
+    <section class="wrap hero">
+      <div><span class="tag">Computer Vision · Industrial AI</span><h1>FBR Cotton Bale <span class="accent">Detection</span></h1><p>An AI-powered video analytics solution that detects, tracks, counts, and verifies cotton-bale movement from live RTSP camera streams—built for dependable Track &amp; Trace operations in challenging factory environments.</p><div class="actions"><a class="btn primary" href="#features">Explore Features</a><a class="btn" href="#architecture">View Pipeline</a></div></div>
+      <aside class="panel" aria-label="Project highlights"><div class="metric"><strong>Real time</strong>RTSP stream monitoring</div><div class="metric"><strong>AI + Tracking</strong>Detection with identity persistence</div><div class="metric"><strong>60 days</strong>Video playback support</div></aside>
+    </section>
+
+    <section id="features"><div class="wrap"><span class="eyebrow">Core capabilities</span><h2>From camera feed to auditable count</h2><div class="grid">
+      <article class="card"><div class="icon">◉</div><h3>Live Detection</h3><p>Recognizes moving cotton bales from fixed production cameras using an optimized YOLO model.</p></article>
+      <article class="card"><div class="icon">◎</div><h3>Object Tracking</h3><p>Uses ByteTrack and detection-zone logic to maintain identities and reduce duplicate counting.</p></article>
+      <article class="card"><div class="icon">✓</div><h3>Re-verification</h3><p>Reviews saved stream segments to provide a second opportunity to identify bales missed live.</p></article>
+      <article class="card"><div class="icon">▣</div><h3>Evidence Logs</h3><p>Stores timestamps, screenshots, video clips, counts, and event details for later review.</p></article>
+      <article class="card"><div class="icon">↶</div><h3>Video Playback</h3><p>Supports historical playback so authorized teams can investigate and validate events.</p></article>
+      <article class="card"><div class="icon">⚙</div><h3>CPU Optimized</h3><p>OpenVINO FP16 inference and configurable thresholds improve performance on limited hardware.</p></article>
+    </div></div></section>
+
+    <section id="architecture"><div class="wrap"><span class="eyebrow">Processing pipeline</span><h2>How the solution works</h2><div class="flow"><div class="step">📹<br><strong>RTSP Camera</strong></div><span class="arrow">→</span><div class="step">🧠<br><strong>AI Detection</strong></div><span class="arrow">→</span><div class="step">⌖<br><strong>Tracking &amp; Zone</strong></div><span class="arrow">→</span><div class="step">▤<br><strong>Count &amp; Logs</strong></div><span class="arrow">→</span><div class="step">↻<br><strong>Re-verification</strong></div></div></div></section>
+
+    <section><div class="wrap about"><div><span class="eyebrow">Engineering focus</span><h2>Designed for real factory conditions</h2><p>The system addresses rapid movement, stacked bales, reverse movement, stationary objects, narrow passages, weak connectivity, and CPU-only deployment. Per-camera thresholds and operational SOPs help adapt detection behavior to each location.</p></div><div class="stack"><span class="pill">Python</span><span class="pill">YOLO</span><span class="pill">OpenVINO</span><span class="pill">ByteTrack</span><span class="pill">FastAPI</span><span class="pill">PostgreSQL</span><span class="pill">Redis</span><span class="pill">Docker</span><span class="pill">Nginx</span><span class="pill">FFmpeg</span><span class="pill">RTSP</span><span class="pill">Next.js</span></div></div></section>
+  </main>
+  <footer id="contact"><div class="wrap"><strong>Maria Naseem</strong> · AI Solution Architect &amp; Software Engineer<br><span>FBR Video Analytics Portfolio Project</span></div></footer>
+</body>
+</html>
